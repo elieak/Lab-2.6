@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace BinaryDisplay
 {
+    //Prints "0" for invalid input.
     class BinaryDisplay
     {
         static void Main()
@@ -14,6 +15,7 @@ namespace BinaryDisplay
             int.TryParse(Console.ReadLine(), out input);
             var bin = Convert.ToString(input, 2);
 
+            //Consider using string interpolation (with the $ sign), string.Format or even the overload of Console.WriteLine that accepts a format (Console.WriteLIne("foo{0}", "bat");)
             Console.WriteLine("Binary number representation: " + bin);
 
             if (input > 0)
@@ -27,6 +29,7 @@ namespace BinaryDisplay
 
         }
 
+        //Nice.
         public double ToBinary(int value)
         {
             var a = value;
@@ -42,6 +45,7 @@ namespace BinaryDisplay
             return count;
         }
 
+        //Ok. But bitwise would have worked fine with "<<". This is cheating ;)
         public string ToNegativeBinary(string value)
         {
             var arr = value.ToCharArray();

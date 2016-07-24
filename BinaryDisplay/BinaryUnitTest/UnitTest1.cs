@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BinaryUnitTest
 {
+    //No UnitTests?
     [TestClass]
     public class UnitTest1
     {
